@@ -29,16 +29,17 @@ SEQ_SIZE = 64
 RANDOM_SEED = 11
 VALIDATION_SIZE = 0.15
 LR = 1e-3
-N_EPOCHS = 5 #WAS 100
+N_EPOCHS = 50
 NUM_LAYERS, HIDDEN_SIZE = 2, 150
 DROPOUT_P = 0
 model_type = 'lstm'
 
-use_cuda = False #torch.cuda.is_available(); log("use_cuda is: %s" % use_cuda)
+use_cuda = torch.cuda.is_available(); log("use_cuda is: %s" % use_cuda)
 
 torch.manual_seed(RANDOM_SEED)
-INPUT = f'data/music.txt'  # Music
-RESUME =False# True                                   # r e s u m i n g (Micha: Remove)
+INPUT = f'data/OldMusic/music.txt'  # Music
+#INPUT = f'C:/Users/212574830/Documents/GitRepo/DL_Music/data/Music/Abc/Music.abc'
+RESUME =False # True                                   # r e s u m i n g (Micha: Remove)
 CHECKPOINT = 'ckpt_mdl_{}_ep_{}_hsize_{}_dout_{}'.format(model_type, N_EPOCHS, HIDDEN_SIZE, DROPOUT_P)
 
 PLOT = True
@@ -113,7 +114,7 @@ def seq_to_tensor(seq):
         out[i] = char_idx.index(c)
 
     if use_cuda:
-        out.cuda()
+        out = out.cuda()
 
     return out
 
@@ -197,13 +198,8 @@ def some_pass(seq, target, fit=True):
     some_loss = 0
     
     for i, c in enumerate(seq):
-
-        if(use_cuda):
-            output = model(c.cuda())
-            some_loss += loss_function(output, torch.unsqueeze(target[i],dim=0).cuda())
-        else:
-            output = model(c)
-            some_loss += loss_function(output, torch.unsqueeze(target[i],dim=0))
+        output = model(c)
+        some_loss += loss_function(output, torch.unsqueeze(target[i],dim=0))
         
     if fit:
         some_loss.backward()
@@ -320,7 +316,7 @@ def write_song(prime_str='<start>', max_len=1000, temp=0.8):
     for j in range(max_len):
         out = model(Variable(seq_to_tensor(creation[-1]))).data.view(-1)
         
-        out = np.array(np.exp(out/temp))
+        out = np.array(np.exp(out.cpu()/temp))
         dist = out / np.sum(out)
 
         # Add predicted character to string and use as next input        
