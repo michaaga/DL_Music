@@ -30,7 +30,7 @@ RANDOM_SEED = 11
 VALIDATION_SIZE = 0.15
 LR = 1e-3
 N_EPOCHS = 5 #WAS 100
-NUM_LAYERS, HIDDEN_SIZE = 3, 150
+NUM_LAYERS, HIDDEN_SIZE = 2, 150
 DROPOUT_P = 0
 model_type = 'lstm'
 
@@ -239,6 +239,10 @@ if use_cuda:
     torch.backends.cudnn.benchmark = True
 
 optimizer = torch.optim.Adam(model.parameters(), lr=LR)
+# optimizer = torch.optim.SGD(model.parameters(), lr=LR, momentum=0.9)
+# optimizer = torch.optim.Adagrad(model.parameters())
+# optimizer = torch.optim.RMSprop(model.parameters())
+
 loss_function = nn.CrossEntropyLoss()
 
 # Train
@@ -328,52 +332,50 @@ def write_song(prime_str='<start>', max_len=1000, temp=0.8):
 
 log(write_song(max_len=1000, temp=0.8))
 
+# # Heatmap generation
+# # Needed to make this 100x100 in order to be able to print it out as a nice lookin grid...
+# heatmap = np.zeros((100,100))
+# for neuron_idx in range(len(char_idx)-1):
+#     for j, char in enumerate(char_idx):
+#         #model.init_hidden()
+#         out = model(Variable(seq_to_tensor(char))).data.view(-1)[neuron_idx]
+#         heatmap[neuron_idx,j] = out
 
-if PLOT:
-    # Heatmap generation
-    # Needed to make this 100x100 in order to be able to print it out as a nice lookin grid...
-    heatmap = np.zeros((100,100))
-    for neuron_idx in range(len(char_idx)-1):
-        for j, char in enumerate(char_idx):
-            #model.init_hidden()
-            out = model(Variable(seq_to_tensor(char))).data.view(-1)[neuron_idx]
-            heatmap[neuron_idx,j] = out
+# # Adapted from https://stackoverflow.com/questions/25071968/heatmap-with-text-in-each-cell-with-matplotlibs-pyplot
+# plt.rc('font', size=100)          # controls default text sizes
+# plt.rc('axes', titlesize=100)     # fontsize of the axes title
+# plt.rc('axes', labelsize=0)    # fontsize of the x and y labels
+# plt.rc('xtick', labelsize=100)    # fontsize of the tick labels
+# plt.rc('ytick', labelsize=100)    # fontsize of the tick labels
+# plt.rc('legend', fontsize=100)    # legend fontsize
+# plt.rc('figure', titlesize=100)  # fontsize of the figure title
 
-    # Adapted from https://stackoverflow.com/questions/25071968/heatmap-with-text-in-each-cell-with-matplotlibs-pyplot
-    plt.rc('font', size=100)          # controls default text sizes
-    plt.rc('axes', titlesize=100)     # fontsize of the axes title
-    plt.rc('axes', labelsize=0)    # fontsize of the x and y labels
-    plt.rc('xtick', labelsize=100)    # fontsize of the tick labels
-    plt.rc('ytick', labelsize=100)    # fontsize of the tick labels
-    plt.rc('legend', fontsize=100)    # legend fontsize
-    plt.rc('figure', titlesize=100)  # fontsize of the figure title
+# title = "Heatmap For Music RNN"
+# xlabel= "Character"
+# ylabel="Neuron ID"
+# data =  np.reshape(heatmap[0,:], (10,-1))
+# plt.figure(figsize=np.shape(heatmap))
+# plt.title(title)
+# plt.xlabel(xlabel)
+# plt.ylabel(ylabel)
+# c = plt.pcolor(data, edgecolors='k', linewidths=4, cmap='RdBu_r', vmin=-1.0, vmax=1.0)
 
-    title = "Heatmap For Music RNN"
-    xlabel= "Character"
-    ylabel="Neuron ID"
-    data =  np.reshape(heatmap[0,:], (10,-1))
-    plt.figure(figsize=np.shape(heatmap))
-    plt.title(title)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    c = plt.pcolor(data, edgecolors='k', linewidths=4, cmap='RdBu_r', vmin=-1.0, vmax=1.0)
+# def show_values(pc, fmt="%.2f", **kw):
+#     pc.update_scalarmappable()
+#     ax = pc.axes
+#     for p, color, value in zip(pc.get_paths(), pc.get_facecolors(), pc.get_array()):
+#         x, y = p.vertices[:-2, :].mean(0)
+#         if np.all(color[:3] > 0.5):
+#             color = (0.0, 0.0, 0.0)
+#         else:
+#             color = (1.0, 1.0, 1.0)
+#         idx = int(x-.5) + 10*int(y-.5)
+#         if idx < len(char_idx):
+#             ax.text(x, y, repr(char_list[idx])[1:-1], fontsize=180, ha="center", va="center", color=color, **kw)
 
-def show_values(pc, fmt="%.2f", **kw):
-    pc.update_scalarmappable()
-    ax = pc.axes
-    for p, color, value in zip(pc.get_paths(), pc.get_facecolors(), pc.get_array()):
-        x, y = p.vertices[:-2, :].mean(0)
-        if np.all(color[:3] > 0.5):
-            color = (0.0, 0.0, 0.0)
-        else:
-            color = (1.0, 1.0, 1.0)
-        idx = int(x-.5) + 10*int(y-.5)
-        if idx < len(char_idx):
-            ax.text(x, y, repr(char_list[idx])[1:-1], fontsize=180, ha="center", va="center", color=color, **kw)
+# show_values(c)
+# plt.colorbar(c)
 
-if PLOT:
-    show_values(c)
-    plt.colorbar(c)
-    plt.show()
+# plt.show()
 
 CHECKPOINT

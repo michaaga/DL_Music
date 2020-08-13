@@ -2,6 +2,8 @@ import os
 import sys
 import time
 import math
+from os import listdir
+from os.path import isfile, join
 
 # Only do the function below if verbose
 def logger(verbose):
@@ -67,3 +69,25 @@ def format_time(seconds):
     if f == '':
         f = '0ms'
     return f
+
+def createAbcFile(mypath):
+
+    buffer = ""
+    onlyfiles = [os.path.join(mypath, f) for f in os.listdir(mypath)]
+
+    for f in onlyfiles:
+        fileHandler = open(f,"r")
+        fileContent = fileHandler.read()
+        buffer += "<start>" + "\n"
+        buffer += fileContent
+        buffer += "<end>" + "\n"
+        fileHandler.close()
+
+    outFile = open(mypath + "\Music.abc","w+")
+    outFile.write(buffer)
+    outFile.close()
+
+    return
+
+#var = f"C:\\Users\\212574830\\Documents\\GitRepo\\DL_Music\\data\\Music\\Abc"
+#createAbcFile(var)
