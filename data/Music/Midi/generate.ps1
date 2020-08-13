@@ -1,0 +1,1 @@
+Get-ChildItem -File | Foreach {.\midi2abc.exe -f $_.fullname -o $_.BaseName + ".abc" }
