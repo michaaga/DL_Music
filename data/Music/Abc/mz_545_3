@@ -1,0 +1,174 @@
+X: 1
+T: from C:\Users\212574830\Documents\GitRepo\DL_Music\data\Music\Midi\mz_545_3.mid
+M: 2/4
+L: 1/16
+Q:1/4=102
+K:C % 0 sharps
+V:1
+%%MIDI program 0
+z4 [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [fd]/2z3/2 [fd]/2z3/2| \
+[dB]3/2z2z/2 cd ec| \
+AB c^c de fd|
+cB AG [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [af]/2z3/2 [af]/2z3/2| \
+[dB]3/2z2z/2 ag fe| \
+^cd ef A=c Bd|
+c2 z2 [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [fd]/2z3/2 [fd]/2z3/2| \
+[dB]3/2z2z/2 cd ec| \
+AB c^c de fd|
+cB AG [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [af]/2z3/2 [af]/2z3/2| \
+[dB]3/2z2z/2 ag fe| \
+^cd ef A=c Bd|
+c2 z2 e^f g/2z/2g/2z/2| \
+ag ^fe d/2z/2d/2z/2 d/2z/2d/2z/2| \
+ed cB e'd' c'b| \
+^ga bc' e^f =ga|
+g^f ed [d'b]/2z3/2 [d'b]/2z3/2| \
+[bg]3/2z2z/2 [c'a]/2z3/2 [c'a]/2z3/2| \
+[a^f]3/2z2z/2 ga bg| \
+^de ge =dB cA|
+Gz3 GA Bc| \
+dz3 Bc de| \
+fz3 de fg| \
+a/2z3/2 ^g/2z3/2 =g/2z3/2 ^f/2z3/2|
+f2 z2 [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [fd]/2z3/2 [fd]/2z3/2| \
+[dB]3/2z2z/2 cd ec| \
+AB c^c de fd|
+cB AG [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [af]/2z3/2 [af]/2z3/2| \
+[dB]3/2z2z/2 ag fe| \
+^cd ef A=c Bd|
+c2 z6| \
+e^d fe z4| \
+e^d fe [c'e]/2z3/2 [c'e]/2z3/2| \
+[ac]z3 [bd]/2z3/2 [bd]/2z3/2|
+[^gB]z3 ae cA| \
+c^A A/2z/2A d^c c/2z/2c/2z/2| \
+ed/2z/2 fe/2z/2 gf/2z/2 fe/2z/2| \
+e^d/2z/2 c'4 d2|
+e2 z2 b^g ed| \
+ce a^g ae cA| \
+^GB eg bg ed| \
+ce a^g ae cA|
+E2 z2 [ec]/2z3/2 [ec]/2z3/2| \
+[cA]z3 [dB]/2z3/2 [dB]/2z3/2| \
+[B^G]z6z| \
+E^D FE z4|
+e'^d' f'e' =d'^c' e'd'| \
+d'c' c'/2z/2b ba a/2z/2g/2z/2| \
+gf/2z/2 fe/2z/2 ed/2z/2 dc/2z/2| \
+^Af dA =A2 ^G2|
+A2 z2 ^Gd BG| \
+A2 z2 ^Gd BG| \
+A2 z2 ^Gd BG| \
+Ae cA Bf dB|
+z4 [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [fd]/2z3/2 [fd]/2z3/2| \
+[dB]3/2z2z/2 cd ec| \
+AB c^c de fd|
+cB AG [ge]/2z3/2 [ge]/2z3/2| \
+[ec]3/2z2z/2 [af]/2z3/2 [af]/2z3/2| \
+[dB]3/2z2z/2 ag fe| \
+^cd ef A=c Bd|
+c2 z2 Bf dB| \
+ag fe df dB| \
+ag fe d'c' ba| \
+ag f/2z/2e/2z/2 ed c/2z/2B/2z/2|
+d2 c2 Bf dB| \
+ag fe df dB| \
+ag fe d'c' ba| \
+ag f/2z/2e/2z/2 ed c/2z/2B/2z/2|
+ce Gc EG CE| \
+Gc [ec][ge] [ge][fd] [ec]/2z/2[dB]/2z/2| \
+ce Gc EG CE| \
+Gc [ec][ge] [ge][fd] [ec]/2z/2[dB]/2z/2|
+c2 [c'ge]3/2z/2 [cE]3/2z/2 [cE]3/2z/2| \
+[cE]4 
+V:2
+%%MIDI program 0
+z8| \
+[CA,]/2z3/2 [CA,]/2z3/2 [A,F,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [G,E,]z3| \
+F,6 D,2|
+G,2 z6| \
+[CA,]/2z3/2 [CA,]/2z3/2 [F,D,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [E,C,]z3| \
+[A,F,]6 [FG,]2|
+[EC]2 C,z4z| \
+[CA,]/2z3/2 [CA,]/2z3/2 [A,F,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [G,E,]z3| \
+F,6 D,2|
+G,2 z6| \
+[CA,]/2z3/2 [CA,]/2z3/2 [F,D,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [E,C,]z3| \
+[A,F,]6 [FG,]2|
+[EC]2 C,z CG EG| \
+B,G DG ^F,D A,D| \
+G,D B,D B,,G, D,G,| \
+C,A, E,A, ^C,A, E,A,|
+D,2 z6| \
+[GE]/2z3/2 [GE]/2z3/2 [EC]z3| \
+[^FD]/2z3/2 [FD]/2z3/2 [DB,]z3| \
+[G,-C,]4 [G,D,-]2 [^F,D,]2|
+G,z G,,z4z| \
+[B,G,]z G,,z4z| \
+[B,G,]z G,,z4z| \
+z8|
+z8| \
+[CA,]/2z3/2 [CA,]/2z3/2 [A,F,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [G,E,]z3| \
+F,6 D,2|
+G,2 z6| \
+[CA,]/2z3/2 [CA,]/2z3/2 [F,D,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [E,C,]z3| \
+[A,F,]6 [FG,]2|
+[EC]2 C,z [EC]/2z3/2 [EC]/2z3/2| \
+[CA,]z3 [DB,]/2z3/2 [DB,]/2z3/2| \
+[B,^G,]z6z| \
+E^D FE z4|
+E^D FE [EC]4| \
+[FD]4 [GE]4| \
+[A-F]2 [A-^C]2 [A-D]2 [AE]2| \
+[AF]2 z2 [AF]2 z2|
+E,E ^G,E B,E G,E| \
+E,E A,E CE A,E| \
+E,E ^G,E B,E G,E| \
+E,E A,E CE A,E|
+E,2 z6| \
+E^D FE z4| \
+E^D FE [CE,]/2z3/2 [CE,]/2z3/2| \
+[A,C,]z3 [B,D,]/2z3/2 [B,D,]/2z3/2|
+[^G,B,,]z3 [B,G,]4| \
+[CA,]2 [DB,]2 [E-C]2 [E^C]2| \
+[A-D]2 [A-E]2 [A-F]2 [AE]2| \
+[FD]4 [CE,-]2 [B,E,]2|
+A,C EC E,B, DB,| \
+A,C EC E,B, DB,| \
+A,C EC E,B, DB,| \
+A,C EC G,D FD|
+z8| \
+[CA,]/2z3/2 [CA,]/2z3/2 [A,F,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [G,E,]z3| \
+F,6 D,2|
+G,2 z6| \
+[CA,]/2z3/2 [CA,]/2z3/2 [F,D,]z3| \
+[B,G,]/2z3/2 [B,G,]/2z3/2 [E,C,]z3| \
+[A,F,]6 [FG,]2|
+[EC]2 C,z F,B, G,B,| \
+E,C G,C F,B, G,B,| \
+E,C G,C F,D A,D| \
+G,E CE G,F DF|
+CG EG F,B, G,B,| \
+E,C G,C F,B, G,B,| \
+E,C G,C F,D A,D| \
+G,E CE G,F DF|
+CE G,C E,G, C,E,| \
+G,2 z2 G,,2 z2| \
+CE G,C E,G, C,E,| \
+G,2 z2 G,,2 z2|
+[C,C,,]2 [E,E,,]3/2z/2 [G,G,,]3/2z/2 [E,E,,]3/2z/2| \
+[C,C,,]4 

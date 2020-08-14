@@ -29,15 +29,15 @@ SEQ_SIZE = 64
 RANDOM_SEED = 11
 VALIDATION_SIZE = 0.15
 LR = 1e-3
-N_EPOCHS = 50
-NUM_LAYERS, HIDDEN_SIZE = 2, 150
+N_EPOCHS = 150
+NUM_LAYERS, HIDDEN_SIZE = 2, 512
 DROPOUT_P = 0
 model_type = 'lstm'
 
 use_cuda = torch.cuda.is_available(); log("use_cuda is: %s" % use_cuda)
 
 torch.manual_seed(RANDOM_SEED)
-INPUT = f'data/OldMusic/music.txt'  # Music
+INPUT = f'data/OldMusic/OldMusic.txt'  # Music
 #INPUT = f'C:/Users/212574830/Documents/GitRepo/DL_Music/data/Music/Abc/Music.abc'
 RESUME =False # True                                   # r e s u m i n g (Micha: Remove)
 CHECKPOINT = 'ckpt_mdl_{}_ep_{}_hsize_{}_dout_{}'.format(model_type, N_EPOCHS, HIDDEN_SIZE, DROPOUT_P)

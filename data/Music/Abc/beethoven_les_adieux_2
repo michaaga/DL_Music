@@ -1,0 +1,94 @@
+X: 1
+T: from C:\Users\212574830\Documents\GitRepo\DL_Music\data\Music\Midi\beethoven_les_adieux_2.mid
+M: 4/4
+L: 1/8
+Q:1/4=56
+K:Eb % 3 flats
+V:1
+%%MIDI program 0
+G3/2_G/2 =A6| \
+G3/2_G/2 =A4- [A-A]3/2[eA]/2| \
+e2 [dD-]3/2[GD]/2 G2 [_GC-]3/2[=AC]/2| \
+=A3/2=B/2- [B-DB,]2 [B-D-B,-][cBD-B,-]/2[BADB,]/2 Bc|
+e3/2d/2 f4- f3/2d/2| \
+[fe-]/2ed/2 f4- [f-d]3/2[af]/2| \
+a2 [gG-]3/2[cG]/2 c2 [=BF-]3/2[dF]/2| \
+d3/2e/2- [e-E]2 [e-E][eA] GA|
+c (3B/2c/2B/2 [B-=A]/2Bc/2 _d2- d/2c/2b/2g/2| \
+g3b/2a/2 z2 AG| \
+[GC-=A,-]3/2[_GC-A,-]/2 [ACA,]4 [AD-]3/2[=GD]/2| \
+[GD-C-]3/2[_GDC]/2 [=AD-B,-]3/2[=GDB,]/2 [BD-A,-]3/2[ADA,]/2 _G/2A/2c/2e/2|
+d/2c/2B/2=A/2 c/2_g/2a/2c'/2 b/2a/2=g/2_g/2 a/2c'/2d'/2e'/2| \
+d'/2c'/2b/2=a/2 c'/2a/2g/2_g/2 c'/2a/2=g/2_g/2 a/2g/2e/2d/2| \
+d2 =A4 =BG| \
+G (3_G/2=G/2_G/2 [G-=E]/2G/2=G =A=B c/2_d/2d/2=d/2|
+_d/2=d/2=e/2d/2 =A2- A/2 (3=B/2A/2B/2[cA]/2 [cB]/2[dB]/2_d/2G/2| \
+G2 z/2z/2G =AB c/2_d/2d/2=d/2| \
+d[bd] z[bd] z[=ac] z[gB]| \
+z[gBG] z[geG] z[fdG] z[ecG]|
+[f_d-B-G-]3/2[=ed-B-G-]/2 [gdBG]6| \
+[f_d-B-G-]3/2[=ed-B-G-]/2 [g-dBG]4 [g-gd-]3/2[d'gd]/2| \
+_d'2 [c'c-]3/2[fc]/2 f2 [=eB-]3/2[gB]/2| \
+g3/2a/2- [a-c]2 [a-c][a_d-]/2d/2 cd|
+f (3e/2f/2e/2 [e-d]/2ef/2 _g2- g/2f/2e'/2c'/2| \
+c'3e'/2_d'/2 z2 _GF| \
+[F_D-B,-G,-]3/2[=ED-B,-G,-]/2 [G-DB,G,]G3 [GC-A,-]3/2[FCA,]/2| \
+[FC-B,-]3/2[=ECB,]/2 [GC-A,-]3/2[FCA,]/2 [AC-G,-]3/2[GCG,]/2 E/2G/2B/2_d/2|
+c/2B/2A/2G/2 B/2=e/2g/2b/2 a/2g/2f/2e/2 g/2b/2c'/2_d'/2| \
+c'/2b/2a/2g/2 b/2g/2f/2=e/2 b/2g/2f/2e/2 [g'g]/2[e'e]/2[_d'd]/2[c'c]/2| \
+[c'c]2 [gG]4 [=aA][fF]| \
+[fF-][=eF-]/2[feF]/2 [e-dE-]/2[eE]/2[fF] [gG][=aA] [bB]/2[=bB]/2[bB]/2[c'c]/2|
+=b/2c'/2d'/2c'/2 g2- g/2 (3=a/2g/2a/2[_bg]/2 [ba]/2[c'a]/2=b/2f'/2| \
+[fF-][=eF-]/2[feF]/2 [e-dE-]/2[eE]/2[fF] [gG][aA] [bB]/2[=bB]/2[bB]/2[c'c]/2| \
+[c'ac][a'c'a] z[ac] z[gB] z[fA]| \
+[fA][f'af] z[fAF] z[ecF] z[_dBF]|
+[cA-F-D-]3/2[=BA-F-D-]/2 [dAFD]6| \
+c3/2=B/2 dz d3/2c/2 ez| \
+[eA-F-]3/2[dA-F-]/2 [fAF]6| \
+e3/2d/2 fz f3/2e/2 gz|
+[gdA]3/2f/2 a3-a/2f/2 d'2-| \
+d'3/2a/2 f'3-f'/2d'/2 a'2|
+V:2
+%%MIDI program 0
+[E-C,-]2 [E-_G,C,-]2 [E-=A,C,-]2 [EG,C,]2| \
+[E-C,-]2 [E-_G,C,-]2 [E-=A,C,-]2 [EG,C,]2| \
+z2 [G,=B,,]2 z2 [=A,D,]2| \
+z2 [G,G,,]2 [G,G,,]2 z2|
+[A-F,-]2 [A-=B,F,-]2 [A-DF,-]2 [AB,F,]2| \
+[A-F,-]2 [A-=B,F,-]2 [A-DF,-]2 [AB,F,]2| \
+z2 [CE,]2 z2 [DG,]2| \
+z2 [CC,]2 [CC,][EC] [E_DB,][ECA,]|
+[EB,G,]2 [=EB,G,]3[_DA,F,] [CG,E,][CG,E,]| \
+[CG,=E,]2 [CA,F,]2 z4| \
+[E,D,,-]2 [_G,,D,,-]2 [=A,,D,,]2 [B,D,B,,]2| \
+[=A,D,A,,]2 [G,D,G,,]2 [_G,D,G,,]2 z2|
+z8| \
+z8| \
+[=A,_G,]/2D/2[A,G,]/2D/2 [A,G,]/2D/2[A,G,]/2D/2 [A,G,]/2D/2[A,G,]/2D/2 [=B,=G,]/2D/2[B,G,]/2D/2| \
+[C=A,]/2D/2[CA,]/2D/2 [CA,]/2D/2[CA,]/2D/2 [CA,]/2D/2[=B,G,]/2D/2 [A,_G,]/2D/2[A,G,]/2D/2|
+[=A,_G,]/2D/2[A,G,]/2D/2 [A,G,]/2D/2[A,G,]/2D/2 [A,G,]/2D/2[A,G,]/2D/2 [=B,=G,]/2D/2[B,G,]/2D/2| \
+[C=A,]/2D/2[CA,]/2D/2 [CA,]/2D/2[CA,]/2D/2 [CA,]/2D/2[B,G,]/2D/2 [A,_G,]/2D/2[A,G,]/2D/2| \
+[B,G,]/2D/2_G/2=G/2 D/2B,/2=A,/2G,/2 [_G,D,]/2A,/2C/2D,/2 E,/2=G,/2B,/2G,/2| \
+[G,E,]/2B,/2D/2E/2 B,/2G,/2F,/2E,/2 [=B,,G,,]/2D,/2G,/2B,,/2 C,/2E,/2G,/2C,/2|
+[_D-B,,-]2 [D-=E,B,,-]2 [D-G,B,,-]2 [DE,B,,]2| \
+[_D-B,,-]2 [D-=E,B,,-]2 [D-G,B,,]2 [DE,B,,]2| \
+z2 [F,C,A,,]2 z2 [=EG,C,]2| \
+z2 [FF,]2 [FF,][AF] [A_GE][AF_D]|
+[AEC]2 [=AEC]3[_G_DB,] [FCA,][FCA,]| \
+[FC=A,]2 [F_DB,]2 z4| \
+[_D,C,,-]2 [=E,,C,,-]2 [G,,C,,]2 [A,,C,,A,,,]2| \
+[G,,C,,G,,,]2 [F,,C,,F,,,]2 [=E,,C,,E,,,]2 z2|
+z8| \
+z8| \
+[G,=E,]/2C/2[G,E,]/2C/2 [G,E,]/2C/2[G,E,]/2C/2 [G,E,]/2C/2[G,E,]/2C/2 [=A,F,]/2C/2[A,F,]/2C/2| \
+[B,G,]/2C/2[B,G,]/2C/2 [B,G,]/2C/2[B,G,]/2C/2 [B,G,]/2C/2[=A,F,]/2C/2 [G,=E,]/2C/2[G,E,]/2C/2|
+[G,=E,]/2C/2[G,E,]/2C/2 [G,E,]/2C/2[G,E,]/2C/2 [G,E,]/2C/2[G,E,]/2C/2 [=A,F,]/2C/2[A,F,]/2C/2| \
+[B,G,]/2C/2[B,G,]/2C/2 [B,G,]/2C/2[B,G,]/2C/2 [B,G,]/2C/2[A,F,]/2C/2 [G,=E,]/2C/2[G,E,]/2C/2| \
+[A,F,]/2C/2=E/2F/2 C/2A,/2G,/2F,/2 [E,C,]/2G,/2B,/2C,/2 _D,/2F,/2A,/2F,/2| \
+[F,_D,]/2A,/2C/2D/2 A,/2F,/2E,/2D,/2 [=A,,F,,]/2C,/2F,/2A,,/2 B,,/2D,/2F,/2B,,/2|
+[A,G,,-]2 [=B,,G,,-]2 [D,G,,-]2 [B,,G,,]2| \
+z8| \
+[D=B,,-]2 [F,B,,-]2 [A,B,,-]2 [F,B,,]2| \
+z8|
+[D-B,,]/2D3/2 F,2 D2 F,2| \
+F2 D2 A2 F2|

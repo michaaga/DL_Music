@@ -1,0 +1,77 @@
+X: 1
+T: from C:\Users\212574830\Documents\GitRepo\DL_Music\data\Music\Midi\waldstein_2.mid
+M: 6/8
+L: 1/8
+Q:1/4=20
+K:F % 1 flats
+V:1
+%%clef treble
+%%MIDI program 1
+K:E % 232 sharps
+z=C,[A,-C,]/2A,/2 zA,[D-A,]/2D/2| \
+z[EG,][EB,G,] [EB,G,]2z| \
+z
+K:C % 0 sharps
+B,[G-B,]/2G/2 z^C[^A-C]/2A/2| \
+z[B^FB,][BFB,] [BFB,]2z|
+z
+F[B-F]/2B/2 zB[f-B]/2f/2-| \
+feg [^AE]2z| \
+z[AF][fA] [AF]2z| \
+z[GD^A,]z2[EA,G,]z|
+z[FCA,][ACA,] [FCA,]2C,| \
+A,3/2G,/2A,/2^A,/2 B,/2CDA,/2| \
+[A,G,]/2^F/2G/2A/2^A/2f/2 g/2=a/2^a/2z/2C,| \
+^A,3/2=A,/2^A,/2C/2 ^C/2D=CD/2|
+[^A,=A,F,]/2^G/2A/2B/2c/2g/2 a/2b/2c'/2z/2c| \
+[cF-]/2F/2-[fF][fe-G-]/2[eG-]/2 [gG][^AE-]/2E/2[=AF-]/2[A^GF]/2| \
+[cF-]/2F/2-[fF][fe-G-]/2[eG-]/2 [gG][^AE][A=A-F-]/2[AF]/2| \
+z[GD^A,]z2[EA,G,]z|
+z
+C,[A,-C,]/2A,/2 zA,[^D-A,]/2D/2| \
+E[EB,^G,][EB,G,] [EB,G,]=G,G,| \
+K:D % 2 sharps
+G,-[B,G,-][G-B,G,-]/2[GG,]/2 zC[^A-C]/2A/2| \
+B[BFB,][BFB,] [BFB,][=F,D,][F,D,]|
+=F,-[FF,][B-F]/2B3/2B[f-B]/2f/2-| \
+=f
+K:C % 0 sharps
+f[^g-f]/2g3/2f[d'-f]/2d'/2-| \
+d'
+f[f'-f]/2f'3/2f[f'-f]/2f'/2-| \
+f'
+f[f'-f]/2f'3/2[f'f]/2z/2[d'd]/2z/2|
+[bB]/2z/2[fF]/2z/2[dD]/2z/2 [BB,]/2z/2[FF,]/2z/2[DD,]/2z/2| \
+[B,-B,,]/2B,/2[F,D,B,,][F,D,B,,] [F,D,B,,]2f| \
+ez4e| \
+dzd gzg|
+V:2
+%%MIDI program 1
+[F,,F,,,]3 [F,,F,,,]3| \
+z[E,E,,][E,E,,] [E,E,,]2z| \
+[E,E,,]3 [E,E,,]3| \
+z[^D,B,,D,,][D,B,,D,,] [D,B,,D,,]2z|
+[D,D,,]3 [^C,C,,]3| \
+[C,C,,][C,C,,][C,C,,] [C,C,,]2z| \
+z[D,D,,][D,D,,] [D,D,,]2z| \
+[^A,,A,,,]z2 [C,C,,]z2|
+[F,,F,,,][F,,F,,,][F,,F,,,] [F,,F,,,]2z| \
+[C,F,,]3/2[C,E,,]/2[C,F,,]/2[C,G,,]/2 [C,^G,,]/2[C,A,,][C,^A,,][C,=G,,]/2| \
+[C,-F,,E,,-]/2[C,E,,][C^F,]/2[CG,]/2[CA,]/2 [C^A,]/2F,,/2G,,/2=A,,/2^A,,/2G,,/2| \
+E,,/2[C,G,,][C,^F,,]/2[C,G,,]/2[C,A,,]/2 [C,-^A,,]/2[C,A,,][G,C,E,,][E,C,C,,]/2|
+[C,F,,]3/2^G,/2A,/2B,/2 C/2G,,/2A,,/2B,,/2C,/2^A,,/2| \
+A,,[CA,][C-^A,] [CE,][G,C,][=A,F,]| \
+z[CA,][C-^A,] [CE,][G,C,][F,D,]| \
+[^A,,A,,,]z2 [C,C,,]z2|
+[F,,F,,,]3 [F,,-F,,,]2F,,/2[C,A,,]/2| \
+[A,,E,,-]/2E,,/2[E,E,,][E,E,,] [E,E,,]2z| \
+[E,E,,]3 [E,-E,,-]2[E,E,,-]/2[G,E,E,,]/2| \
+[E,^D,-]/2D,/2[D,B,,D,,][D,B,,D,,] [D,B,,D,,]z2|
+D,2-D,/2[^G,F,]/2 [F,^C,-]/2C,2[G,F,]/2| \
+[F,C,-]/2C,2[^G,F,]/2 [F,B,,-]/2B,,2[G,F,]/2| \
+[F,^G,,-]/2G,,2[B,F,]/2 [F,=G,,-]/2G,,2[B,F,]/2| \
+[F,^G,,-]/2G,,2[B,F,]/2 [F,G,,]/2[B,F,]/2[F,G,,]/2[B,F,]/2[F,G,,]/2[B,F,]/2|
+[F,G,,]/2[B,F,]/2[F,G,,]/2[F,D,]/2[D,G,,]/2[D,B,,]/2 [B,,G,,]/2[D,B,,]/2[B,,G,,]/2B,,/2[B,,G,,]/2[D,,B,,,]/2| \
+[D,,G,,,-]/2G,,,/2[G,,G,,,][G,,G,,,] [^G,,G,,,]2z| \
+z[E,C,A,,A,,,][E,C,A,,A,,,] [E,C,A,,A,,,]2z| \
+[F,,F,,,][A,F,D,]z [G,,G,,,][G,D,B,,]
