@@ -32,7 +32,7 @@ RANDOM_SEED = 11
 VALIDATION_SIZE = 0.15
 LR = 1e-3
 N_EPOCHS = 1
-NUM_LAYERS, HIDDEN_SIZE = 1, 128
+NUM_LAYERS, HIDDEN_SIZE = 2, 256
 DROPOUT_P = 0
 model_type = 'lstm'
 
@@ -45,7 +45,7 @@ INPUT = f'data/OldMusic/OldMusic.txt'  # Music
 #INPUT = f'/content/gdrive/My Drive/Colab Notebooks/Music.abc'
 #INPUT = f'/content/gdrive/My Drive/Colab Notebooks/OldMusic.txt'
 
-RESUME =True # True   # r e s u m i n g (Micha: Remove)
+RESUME =False # True   # r e s u m i n g (Micha: Remove)
 CHECKPOINT = 'ckpt_mdl_{}_ep_{}_hsize_{}_dout_{}'.format(model_type, N_EPOCHS, HIDDEN_SIZE, DROPOUT_P)
 
 PLOT = True

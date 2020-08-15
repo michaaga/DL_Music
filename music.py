@@ -1,5 +1,15 @@
 # -*- coding: utf-8 -*-
 
+
+#pip install utils
+#!pip3 install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
+
+#from google.colab import drive
+#import numpy as np
+#drive.mount('/content/gdrive')
+
+# -*- coding: utf-8 -*-
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -14,14 +24,6 @@ import matplotlib.pyplot as plt
 
 from utils import *
 
-PATH = f'data'
-
-log = logger(True) 
-log("We're logging :)") #Log will print whatever it's given if this first arg is true
-
-# Auto-reloading of modules in iPython
-# %load_ext autoreload
-# %autoreload 2
 
 # CONSTS
 SAVE_EVERY = 20
@@ -34,12 +36,16 @@ NUM_LAYERS, HIDDEN_SIZE = 2, 512
 DROPOUT_P = 0
 model_type = 'lstm'
 
-use_cuda = torch.cuda.is_available(); log("use_cuda is: %s" % use_cuda)
+use_cuda = torch.cuda.is_available();
+print("use_cuda is: %s" % use_cuda)
 
 torch.manual_seed(RANDOM_SEED)
 INPUT = f'data/OldMusic/OldMusic.txt'  # Music
 #INPUT = f'C:/Users/212574830/Documents/GitRepo/DL_Music/data/Music/Abc/Music.abc'
-RESUME =False # True                                   # r e s u m i n g (Micha: Remove)
+#INPUT = f'/content/gdrive/My Drive/Colab Notebooks/Music.abc'
+#INPUT = f'/content/gdrive/My Drive/Colab Notebooks/OldMusic.txt'
+
+RESUME =False # True   # r e s u m i n g (Micha: Remove)
 CHECKPOINT = 'ckpt_mdl_{}_ep_{}_hsize_{}_dout_{}'.format(model_type, N_EPOCHS, HIDDEN_SIZE, DROPOUT_P)
 
 PLOT = True
@@ -62,8 +68,8 @@ f.close()
 # We only want songs which are at least as big as our batch size +1
 data = [ song for song in data if len(song) > SEQ_SIZE + 10 ]
 
-print(data[0])
-print('=====> Data loaded')
+'''print(data[0])
+print('=====> Data loaded')'''
 
 char_idx = ''.join(set(list(open(INPUT,'r').read())))
 char_list = list(char_idx)
@@ -79,10 +85,10 @@ np.random.shuffle(indices)
 train_idxs, valid_idxs = indices[split_idx:], indices[:split_idx]
 
 train_len, valid_len = len(train_idxs), len(valid_idxs)
-log('Number of unique characters: %s' % len(char_idx))
-log('Original data length: %s' % len(data))
-log('Training data length: %s'% train_len)
-log('Validation data length: %s' % valid_len)
+print('Number of unique characters: %s' % len(char_idx))
+print('Original data length: %s' % len(data))
+print('Training data length: %s'% train_len)
+print('Validation data length: %s' % valid_len)
 assert(train_len + valid_len == len(data)), 'Train_len + valid_len should == len(data)'
 
 # Some utils
@@ -103,7 +109,7 @@ def rand_slice(data, slice_len=SEQ_SIZE):
     return data[s_idx:e_idx]
 
 test_slice = rand_slice(data[0])
-log(test_slice)
+print(test_slice)
 
 def seq_to_tensor(seq):
     '''
@@ -118,8 +124,8 @@ def seq_to_tensor(seq):
 
     return out
 
-t = seq_to_tensor(test_slice)
-log('T is a: ', type(t), ' of size ', len(t))
+'''t = seq_to_tensor(test_slice)
+print('T is a: ', type(t), ' of size ', len(t))'''
 
 def train_slice(data, slice_len=50):
     '''
@@ -147,9 +153,9 @@ def song_to_seq_target(song):
     assert(len(seq) == len(target)), 'SEQ AND TARGET MISMATCH'
     return Variable(seq), Variable(target)
 
-s, t = song_to_seq_target(data[0])
-log(s.size())
-assert(t.data[0] == s.data[1])
+'''s, t = song_to_seq_target(data[0])
+print(s.size())
+assert(t.data[0] == s.data[1])'''
 
 class MusicRNN(nn.Module):
     def __init__(self, input_size, hidden_size, output_size, model='gru', num_layers=1):
@@ -281,8 +287,9 @@ for epoch in range(start_epoch, N_EPOCHS):
         }
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
-#         torch.save(state, './checkpoint/ckpt.t%s' % epoch)
+#           torch.save(state, './checkpoint/ckpt.t%s' % epoch)
         torch.save(state, './checkpoint/' + CHECKPOINT + '.t%s' % epoch)
+
     
     # Reset loss
     loss, v_loss = 0, 0
@@ -326,52 +333,8 @@ def write_song(prime_str='<start>', max_len=1000, temp=0.8):
 
     return creation
 
-log(write_song(max_len=1000, temp=0.8))
+print(write_song(max_len=1000, temp=0.8))
 
-# # Heatmap generation
-# # Needed to make this 100x100 in order to be able to print it out as a nice lookin grid...
-# heatmap = np.zeros((100,100))
-# for neuron_idx in range(len(char_idx)-1):
-#     for j, char in enumerate(char_idx):
-#         #model.init_hidden()
-#         out = model(Variable(seq_to_tensor(char))).data.view(-1)[neuron_idx]
-#         heatmap[neuron_idx,j] = out
 
-# # Adapted from https://stackoverflow.com/questions/25071968/heatmap-with-text-in-each-cell-with-matplotlibs-pyplot
-# plt.rc('font', size=100)          # controls default text sizes
-# plt.rc('axes', titlesize=100)     # fontsize of the axes title
-# plt.rc('axes', labelsize=0)    # fontsize of the x and y labels
-# plt.rc('xtick', labelsize=100)    # fontsize of the tick labels
-# plt.rc('ytick', labelsize=100)    # fontsize of the tick labels
-# plt.rc('legend', fontsize=100)    # legend fontsize
-# plt.rc('figure', titlesize=100)  # fontsize of the figure title
-
-# title = "Heatmap For Music RNN"
-# xlabel= "Character"
-# ylabel="Neuron ID"
-# data =  np.reshape(heatmap[0,:], (10,-1))
-# plt.figure(figsize=np.shape(heatmap))
-# plt.title(title)
-# plt.xlabel(xlabel)
-# plt.ylabel(ylabel)
-# c = plt.pcolor(data, edgecolors='k', linewidths=4, cmap='RdBu_r', vmin=-1.0, vmax=1.0)
-
-# def show_values(pc, fmt="%.2f", **kw):
-#     pc.update_scalarmappable()
-#     ax = pc.axes
-#     for p, color, value in zip(pc.get_paths(), pc.get_facecolors(), pc.get_array()):
-#         x, y = p.vertices[:-2, :].mean(0)
-#         if np.all(color[:3] > 0.5):
-#             color = (0.0, 0.0, 0.0)
-#         else:
-#             color = (1.0, 1.0, 1.0)
-#         idx = int(x-.5) + 10*int(y-.5)
-#         if idx < len(char_idx):
-#             ax.text(x, y, repr(char_list[idx])[1:-1], fontsize=180, ha="center", va="center", color=color, **kw)
-
-# show_values(c)
-# plt.colorbar(c)
-
-# plt.show()
 
 CHECKPOINT
