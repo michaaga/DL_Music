@@ -27,12 +27,12 @@ from utils import *
 
 # CONSTS
 SAVE_EVERY = 20
-SEQ_SIZE = 32
+SEQ_SIZE = 64
 RANDOM_SEED = 11
 VALIDATION_SIZE = 0.15
 LR = 1e-3
-N_EPOCHS = 50
-NUM_LAYERS, HIDDEN_SIZE = 2, 512
+N_EPOCHS = 1
+NUM_LAYERS, HIDDEN_SIZE = 1, 128
 DROPOUT_P = 0
 model_type = 'lstm'
 
@@ -45,7 +45,7 @@ INPUT = f'data/OldMusic/OldMusic.txt'  # Music
 #INPUT = f'/content/gdrive/My Drive/Colab Notebooks/Music.abc'
 #INPUT = f'/content/gdrive/My Drive/Colab Notebooks/OldMusic.txt'
 
-RESUME =False # True   # r e s u m i n g (Micha: Remove)
+RESUME =True # True   # r e s u m i n g (Micha: Remove)
 CHECKPOINT = 'ckpt_mdl_{}_ep_{}_hsize_{}_dout_{}'.format(model_type, N_EPOCHS, HIDDEN_SIZE, DROPOUT_P)
 
 PLOT = True
@@ -68,8 +68,8 @@ f.close()
 # We only want songs which are at least as big as our batch size +1
 data = [ song for song in data if len(song) > SEQ_SIZE + 10 ]
 
-print(data[0])
-print('=====> Data loaded')
+'''print(data[0])
+print('=====> Data loaded')'''
 
 char_idx = ''.join(set(list(open(INPUT,'r').read())))
 char_list = list(char_idx)
@@ -124,8 +124,8 @@ def seq_to_tensor(seq):
 
     return out
 
-t = seq_to_tensor(test_slice)
-print('T is a: ', type(t), ' of size ', len(t))
+'''t = seq_to_tensor(test_slice)
+print('T is a: ', type(t), ' of size ', len(t))'''
 
 def train_slice(data, slice_len=50):
     '''
@@ -153,9 +153,9 @@ def song_to_seq_target(song):
     assert(len(seq) == len(target)), 'SEQ AND TARGET MISMATCH'
     return Variable(seq), Variable(target)
 
-s, t = song_to_seq_target(data[0])
+'''s, t = song_to_seq_target(data[0])
 print(s.size())
-assert(t.data[0] == s.data[1])
+assert(t.data[0] == s.data[1])'''
 
 class MusicRNN(nn.Module):
     def __init__(self, input_size, hidden_size, output_size, model='gru', num_layers=1):
@@ -219,7 +219,7 @@ if RESUME:
     print('==> Resuming from checkpoint..')
     assert os.path.isdir('checkpoint'), 'Error: no checkpoint directory found!'
     
-    checkpoint = torch.load('./checkpoint/' + CHECKPOINT + '.t4')
+    checkpoint = torch.load('./checkpoint/' + CHECKPOINT + '.t0')
     model = checkpoint['model']
     loss = checkpoint['loss']
     v_loss = checkpoint['v_loss']
@@ -287,9 +287,8 @@ for epoch in range(start_epoch, N_EPOCHS):
         }
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
-#         torch.save(state, './checkpoint/ckpt.t%s' % epoch)
+#           torch.save(state, './checkpoint/ckpt.t%s' % epoch)
         torch.save(state, './checkpoint/' + CHECKPOINT + '.t%s' % epoch)
-   #     np.save("/content/gdrive/My Drive/Colab Notebooks/" + CHECKPOINT + '.t%s' % epoch , state)
 
     
     # Reset loss
