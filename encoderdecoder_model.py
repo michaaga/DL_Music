@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov 29 08:12:18 2018
 
-@author: dkang
-"""
 import numpy as np
 import pickle
 import torch
@@ -80,8 +76,6 @@ class seq2seq(nn.Module):
 
 ####################################################SETTING UP DATA#########################################################
 if __name__ == "__main__":
-    
-    print('Newest version 12/7/18 7:00 PM')
     
     with open(CURRENT_PATH + 'classical_notes.pkl', 'rb') as handle:
         data = pickle.load(handle)
